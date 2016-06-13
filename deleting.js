@@ -15,6 +15,7 @@ var chatty = (function(deleteChatty){
 		deleteChatty.deleteAll = function(){
 			var output=document.getElementById("outputMessage");
 			output.innerHTML="";
+			
 		}
 		
 	return deleteChatty;

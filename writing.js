@@ -15,7 +15,7 @@ var chatty =(function(writeChatty){
 	 		counter++;
 	 		writeChatty.writeMessage(counter,input.value);
 	 		chatty.addDelete();
-	 		
+	 		document.getElementById("deleteMssgsBtn").disabled=false;
 	 	}
 	 	});
 
