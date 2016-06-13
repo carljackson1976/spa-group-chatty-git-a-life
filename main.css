@@ -1,0 +1,10 @@
+/****** Begin base style *****/
+
+/*Sets all elements to box-sizing: border box and
+sets margin and padding to 0  */
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
