@@ -15,7 +15,7 @@ var chatty = (function(loadChatty){
   for(i=0;i<messageArray.length;i++){
   chatty.writeMessage(i,messageArray[i]); 
   }
-
+  document.getElementById("deleteMssgsBtn").addEventListener("click",chatty.deleteAll);
   loadChatty.addDelete();
   loadChatty.setdarkTheme();
   loadChatty.setlargeText();

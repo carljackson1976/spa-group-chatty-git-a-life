@@ -7,6 +7,7 @@ var chatty =(function(writeChatty){
 	writeChatty.writeMessage=function(id, message){
 		output.innerHTML += `<div id="message${id}" class="message">` + message +`<div class="date">`+
 		date.toDateString()+" "+ date.toLocaleTimeString()+`</div><input type="button" value="delete" id="delete${id}"></div>`
+		//keeps track of the number of messages
 		counter=id;
 		};
 	input.addEventListener("keyup", function(){
