@@ -59,3 +59,16 @@ Message Output Styling
   border: 2px solid black;
   margin: auto;
 }
+ /****************************
+Message Output Styling
+****************************/
+
+.darkTheme{
+  background-color: darkgray;
+  color: white;
+}
+
+.largeText{
+  font-size: 40px;
+}
+}
