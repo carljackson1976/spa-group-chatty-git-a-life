@@ -1,5 +1,6 @@
 var chatty = (function(loadChatty){
 	var messageArray= [];
+  var messages = document.getElementsByClassName("message");
  loadChatty.loadMessages = function(){
   var myRequest = new XMLHttpRequest(); 
   myRequest.open("GET","messages.json");
@@ -9,8 +10,9 @@ var chatty = (function(loadChatty){
   for(i=0;i<messageArray.length;i++){
     chatty.writeMessage(i,messageArray[i]);
   }
-
-   
+  for(v=0;v<messages.length;v++){
+    chatty.delete(messages[v]);
+  }
   });
   }
   loadChatty.getMessages = function(){
@@ -18,5 +20,6 @@ var chatty = (function(loadChatty){
   }
   return loadChatty;	
 })(chatty || {});
+
 
 
