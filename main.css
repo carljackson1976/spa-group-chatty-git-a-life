@@ -8,3 +8,54 @@ body {
   margin: 0;
   padding: 0;
 }
+
+p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+
+/****************************
+NAV Bar Styling
+****************************/
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding-top: 2vh;
+  /*position: absolute;*/
+}
+
+#messageBar {
+  height: 5vh;
+  padding: 0 1vh;
+}
+
+#deleteMssgsBtn {
+  width: 20%;
+  border-radius: 20%;
+}
+
+.inputMessage {
+  width: 60%;
+}
+
+.chatty-logo {
+  font-size: 25px;
+  width: 10%;
+}
+
+
+/****************************
+Message Output Styling
+****************************/
+
+#outputMessage {
+  width: 90%;
+  height: 60%;
+  border: 2px solid black;
+  margin: auto;
+}

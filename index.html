@@ -7,8 +7,24 @@
   </head>
   <body>
 
-    
-  
+    <div id="container">
+      <div id="messageBar">
+        <p class="chatty-logo">Chatty!</div>
+        <input type="text" class="inputMessage" placeholder="Enter Message"></input>
+        <button id="deleteMssgsBtn">Clear Message Board</button>
+      </div>  <!-- End messageBar div -->
+      <div id="option-container">
+        <input type="checkbox" class="dark-theme-option">Dark Theme</input>
+        <input type="checkbox" class="large-text-option">Large Text</input>
+      </div> <!-- End option container -->
+    </div>  <!-- End container div -->
+
+    <div id="messageContainer">
+      <div>Messages:</div>
+      <div id="outputMessage"></div>
+    </div>
+
+
   </body>
   <script src="loading.js"></script>
 </html>
