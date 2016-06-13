@@ -6,6 +6,10 @@ var chatty = (function(loadChatty){
   myRequest.send();	
   myRequest.addEventListener("load",function(){
   messageArray=JSON.parse(event.target.responseText).messages;
+  for(i=0;i<messageArray.length;i++){
+    chatty.writeMessage(i,messageArray[i]);
+  }
+
    
   });
   }
@@ -16,4 +20,3 @@ var chatty = (function(loadChatty){
 })(chatty || {});
 
 
-console.log(chatty);
