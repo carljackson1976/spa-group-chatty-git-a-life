@@ -53,11 +53,13 @@ NAV Bar Styling
 Message Output Styling
 ****************************/
 
+
 #outputMessage {
   width: 90%;
   height: 60%;
   border: 2px solid black;
   margin: auto;
+  margin-top:5%;
 }
  /****************************
 Message Output Styling
@@ -71,4 +73,12 @@ Message Output Styling
 .largeText{
   font-size: 40px;
 }
-}
+#container{   background:gray;
+              width:100%;
+              position:fixed;
+              height:8%;}
+#option-container{width:100%;
+                  margin-left:10%;}
+#messageBar{      width:90%;
+                  margin-left:10%;}
+.chatty-logo  {display:inline;}
