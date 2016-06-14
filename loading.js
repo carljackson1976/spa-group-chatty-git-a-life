@@ -3,6 +3,12 @@ var chatty = (function(loadChatty){
   var messages;
     var darkTheme= document.getElementById("dark-theme-option");
     var largeText= document.getElementById("large-text-option");
+    var bgColor = document.getElementById("backgroundColor");
+    var textColor = document.getElementById("textColor");
+    var navColor = document.getElementById("navColor");
+    var colorBtn = document.getElementById("colorBtn");
+
+    
 
 
 
@@ -43,6 +49,11 @@ var chatty = (function(loadChatty){
   document.body.classList.toggle("darkTheme");
     });
   }
+  loadChatty.setCustomTheme = function(){
+    document.getElementById("container").style.backgroundColor=`#${navColor.value}`;
+    document.body.style.backgroundColor=`#${bgColor.value}`;
+    document.body.style.color=`#${textColor.value}`;
+  }
   
 
   loadChatty.setlargeText = function(){
@@ -52,9 +63,7 @@ var chatty = (function(loadChatty){
     });
   }
   
-
-
-
+  colorBtn.addEventListener("click", loadChatty.setCustomTheme);
   return loadChatty;	
 })(chatty || {});
   
