@@ -7,6 +7,10 @@ var chatty = (function(loadChatty){
     var textColor = document.getElementById("textColor");
     var navColor = document.getElementById("navColor");
     var colorBtn = document.getElementById("colorBtn");
+    var modalClose = document.getElementById("close");
+    var modalOpen = document.getElementById("modalButton");
+
+
 
     
 
@@ -54,6 +58,9 @@ var chatty = (function(loadChatty){
     document.body.style.backgroundColor=`#${bgColor.value}`;
     document.body.style.color=`#${textColor.value}`;
   }
+  loadChatty.displayModal = function(){
+    document.getElementById("colorModal").classList.toggle("visible");
+  }
   
 
   loadChatty.setlargeText = function(){
@@ -63,6 +70,8 @@ var chatty = (function(loadChatty){
     });
   }
   
+  modalClose.addEventListener("click", loadChatty.displayModal);
+  modalOpen.addEventListener("click", loadChatty.displayModal);
   colorBtn.addEventListener("click", loadChatty.setCustomTheme);
   return loadChatty;	
 })(chatty || {});
