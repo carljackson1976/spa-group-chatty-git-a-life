@@ -20,7 +20,7 @@ var chatty = (function(deleteChatty){
 					var inputString = `<input value="${message}" class="editer">`
 					
 					messageText.innerHTML=messageText.innerHTML.replace(`${message}`,inputString);
-					var editBox=document.getElementsByClassName("editer")[counter];
+					var editBox=document.getElementsByClassName("editer")[0];
 					
 					editBox.addEventListener("keyup",function(){
 						if(event.keyCode===13){
