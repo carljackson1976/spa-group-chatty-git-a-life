@@ -15,12 +15,17 @@ var chatty = (function(loadChatty){
   for(i=0;i<messageArray.length;i++){
   chatty.writeMessage(i,messageArray[i]); 
   }
-
+  var deleteAll=document.getElementById("deleteMssgsBtn");
+  deleteAll.addEventListener("click",function(){
+    chatty.deleteAll();
+    if(document.getElementById("outputMessage").innerHTML===""){
+      deleteAll.disabled=true;
+    }
+    
+  });
   loadChatty.addDelete();
   loadChatty.setdarkTheme();
   loadChatty.setlargeText();
-   
-
   });
   }
     loadChatty.addDelete=function(){

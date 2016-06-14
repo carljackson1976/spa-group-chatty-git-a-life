@@ -6,7 +6,8 @@ var chatty =(function(writeChatty){
 	var output = document.getElementById("outputMessage");
 	writeChatty.writeMessage=function(id, message){
 		output.innerHTML += `<div id="message${id}" class="message">` + message +`<div class="date">`+
-		date.toDateString()+" "+ date.toLocaleTimeString()+`</div><input type="button" value="delete" id="delete${id}"></div>`
+		date.toDateString()+" "+ date.toLocaleTimeString()+`</div><input type="button" value="delete" id="delete${id}"><hr></div>`
+		//keeps track of the number of messages
 		counter=id;
 		};
 	input.addEventListener("keyup", function(){
@@ -14,14 +15,13 @@ var chatty =(function(writeChatty){
 	 		counter++;
 	 		writeChatty.writeMessage(counter,input.value);
 	 		chatty.addDelete();
-	 		
+	 		document.getElementById("deleteMssgsBtn").disabled=false;
 	 	}
 	 	});
 
 
-	
+
 	return writeChatty;
 
 })(chatty || {});
 chatty.loadMessages();
-

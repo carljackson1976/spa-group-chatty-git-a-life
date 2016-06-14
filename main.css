@@ -41,7 +41,6 @@ NAV Bar Styling
   flex-flow: row wrap;
   justify-content: space-between;
   padding-top: 2vh;
-  /*position: absolute;*/
 }
 .msgBox{
   padding: 5px;
@@ -55,6 +54,10 @@ NAV Bar Styling
 #deleteMssgsBtn {
   width: 25%;
   border-radius: 5%;
+}
+
+#messageContainer {
+  display: flex;
 }
 
 .inputMessage {
@@ -75,14 +78,25 @@ NAV Bar Styling
 Message Output Styling
 ****************************/
 
+
 #outputMessage {
   font-family: Futura, sans-serif;
   width: 90%;
   height: 60%;
   border: 2px solid black;
   margin: auto;
+<<<<<<< HEAD
   padding: 10px;
+=======
+  margin-top:5%;
+>>>>>>> master
 }
+
+.message {
+  margin: 1.5rem;
+}
+
+
  /****************************
 Message Output Styling
 ****************************/
@@ -93,7 +107,35 @@ Message Output Styling
 }
 
 .largeText{
+<<<<<<< HEAD
   font-size: 25px;
+=======
+  font-size: 40px;
+}
+
+#container{
+  background:gray;
+  width:100%;
+  position:fixed;
+  top: 0;
+}
+
+#option-container{
+  width:100%;
+  margin-left:10%;
+}
+
+#messageBar{
+  width:90%;
+  margin-left:10%;
+}
+.chatty-logo  {
+  display:inline;
+}
+
+.nav-bar-fix {
+  margin-top: 2rem;
+>>>>>>> master
 }
 
 
