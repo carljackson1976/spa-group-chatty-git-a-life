@@ -6,7 +6,6 @@ var chatty = (function(loadChatty){
     var largeText= document.getElementById("large-text-option");
 
 
-
  loadChatty.loadMessages = function(){
   var myRequest = new XMLHttpRequest();
   myRequest.open("GET","messages.json");
@@ -22,6 +21,7 @@ var chatty = (function(loadChatty){
     chatty.deleteAll();
     if(document.getElementById("outputMessage").innerHTML===""){
       deleteAll.disabled=true;
+			document.getElementById("outputMessage").innerHTML = `<h1>Sorry, No Messages!</h1>`
     }
 
   });

@@ -13,7 +13,7 @@ var chatty =(function(writeChatty){
 	input.addEventListener("keyup", function(){
 	 	if(event.code==="Enter"){
 	 		counter++;
-	 		writeChatty.writeMessage(counter,input.value);
+	 		writeChatty.writeMessage(counter,input.value, nameVariable);
 	 		chatty.addDelete();
 	 		document.getElementById("deleteMssgsBtn").disabled=false;
 	 	}
