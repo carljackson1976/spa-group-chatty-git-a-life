@@ -1,16 +1,19 @@
 var chatty =(function(writeChatty){
-	var date = new Date();
+	
 	var input = document.getElementById("inputMessage");
 	var currentMessage;
 	var counter;
 	var output = document.getElementById("outputMessage");
 	var userName;
 	var selectedName = "ChattyBot";
+	
+	
 
 
 	writeChatty.writeMessage=function(id, message, names){
+		var date = new Date();
 		output.innerHTML += `<div id="message${id}" class="message">` + `<em style="font-weight="900"">${names}: </em>` + message +`<div class="date">`+
-		date.toDateString()+" "+ date.toLocaleTimeString()+`</div><input type="button" value="delete" id="delete${id}"><hr></div>`
+		date.getHours()+":"+ date.getMinutes()+":"+date.getSeconds() + `</div><input type="button" value="delete" id="delete${id}"><hr></div>`
 		//keeps track of the number of messages
 		counter=id;
 		};
