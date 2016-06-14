@@ -1,11 +1,17 @@
 {
    "messages":[
-     
-    "Is this app 'Scratch and Sniff?'", 
+
+    "Is this app 'Scratch and Sniff?'",
       "Please....PLEASE someone post a picture of their lunch!",
        "Where am I finding country jams?",
         "Hello, World.",
          "THEN WHO WAS PHONE?!"
 
-	]
+	],
+
+  "names": [
+
+    "Xavier", "Joanna", "Mackenzie", "Iveta", "Sven"
+
+  ]
 }

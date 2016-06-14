@@ -4,8 +4,8 @@ var chatty =(function(writeChatty){
 	var currentMessage;
 	var counter;
 	var output = document.getElementById("outputMessage");
-	writeChatty.writeMessage=function(id, message){
-		output.innerHTML += `<div id="message${id}" class="message">` + message +`<div class="date">`+
+	writeChatty.writeMessage=function(id, message, names){
+		output.innerHTML += `<div id="message${id}" class="message">` + `<em style="font-weight="900"">${names}: </em>` + message +`<div class="date">`+
 		date.toDateString()+" "+ date.toLocaleTimeString()+`</div><input type="button" value="delete" id="delete${id}"><hr></div>`
 		//keeps track of the number of messages
 		counter=id;
