@@ -5,6 +5,7 @@ var chatty =(function(writeChatty){
 	var counter;
 	var output = document.getElementById("outputMessage");
 	var userName;
+	var selectedName = "ChattyBot";
 
 
 	writeChatty.writeMessage=function(id, message, names){
@@ -15,24 +16,29 @@ var chatty =(function(writeChatty){
 		};
 	input.addEventListener("keyup", function(){
 	 	if(event.code==="Enter"){
+	//conditional statements to determine what user name is selected
+		userName = document.getElementsByName('users');
+		
+		//for loop checks which radio is checked and passes the
+		//checked user name to the write message
+		for ( let i = 0; i < userName.length; i++ ) {
+			
+			 if ( userName[i].checked ) {
+				selectedName = userName[i].value;
 
+			}
+			
+		
+		}//end for loop
 
 	 		counter++;
-	 		writeChatty.writeMessage(counter, input.value, userName);
+	 		writeChatty.writeMessage(counter, input.value, selectedName);
 	 		chatty.addDelete();
 	 		document.getElementById("deleteMssgsBtn").disabled=false;
 	 	}
 	 	});
 
-		//conditional statements to determine what user name is selected
-		userName = document.getElementsByName('users');
-		//for loop checks which radio is checked and passes the
-		//checked user name to the write message
-		for ( let i = 0; i < userName.length; i++ ) {
-			if ( userName[i].checked ) {
-				userName = userName[i].value;
-			}
-		}//end for loop
+	
 
 
 	return writeChatty;
