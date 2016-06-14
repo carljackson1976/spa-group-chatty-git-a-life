@@ -2,12 +2,26 @@
 
 /*Sets all elements to box-sizing: border box and
 sets margin and padding to 0  */
+@keyframes animatedBackground {
+	from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+.#animate-area	{ 
+	width: 560px; 
+	height: 400px; 
+	background-image: url(https://www.wpclipart.com/blanks/callouts/shadow_callouts/text_bubble_rectangle_shadow_2.png);
+	background-position: 0px 0px;
+	background-repeat: repeat-x;
 
+	animation: animatedBackground 40s linear infinite;
+}
 body {
-  font-family:Futura,sans-serif ;
+  font-family: Futura, sans-serif ;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: #85CCFF;
+  
 }
 
 p {
@@ -48,11 +62,12 @@ NAV Bar Styling
 }
 
 .chatty-logo {
-  font-family: Impact, sans-serif;
-  font-size: 35px;
-  width: 40%;
-  color: #E83600;
+  font-family: KiloGram, sans-serif;
+  font-size: 30px;
+  width: 110%;
+  color: #185AFF;
   text-align: center;
+  background-color: #71FEDB;
 }
 
 
@@ -78,7 +93,7 @@ Message Output Styling
 }
 
 .largeText{
-  font-size: 30px;
+  font-size: 25px;
 }
 
 
