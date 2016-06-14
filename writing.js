@@ -12,8 +12,8 @@ var chatty =(function(writeChatty){
 
 	writeChatty.writeMessage=function(id, message, names){
 		var date = new Date();
-		output.innerHTML += `<div id="message${id}" class="message">` + `<em style="font-weight="900"">${names}: </em>` + message +`<div class="date">`+
-		date.getHours()+":"+ date.getMinutes()+":"+date.getSeconds() + `</div><input type="button" value="delete" id="delete${id}"><hr></div>`
+		output.innerHTML += `<div id="message${id}" class="message">` + `<em style="font-weight="900"">${names}: </em><div id="messageText${id}">` + message +`</div><div class="date">`+
+		date.getHours()+":"+ date.getMinutes()+":"+date.getSeconds() + `</div><input type="button" value="delete" id="delete${id}"><input type="button" value="edit" id="edit${id}"><hr></div>`
 		//keeps track of the number of messages
 		counter=id;
 		};
@@ -36,6 +36,7 @@ var chatty =(function(writeChatty){
 
 	 		counter++;
 	 		writeChatty.writeMessage(counter, input.value, selectedName);
+	 		input.value="";
 	 		chatty.addDelete();
 	 		document.getElementById("deleteMssgsBtn").disabled=false;
 	 	}
