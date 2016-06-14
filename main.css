@@ -2,19 +2,7 @@
 
 /*Sets all elements to box-sizing: border box and
 sets margin and padding to 0  */
-@keyframes animatedBackground {
-	from { background-position: 0 0; }
-	to { background-position: 100% 0; }
-}
-.#animate-area	{ 
-	width: 560px; 
-	height: 400px; 
-	background-image: url(https://www.wpclipart.com/blanks/callouts/shadow_callouts/text_bubble_rectangle_shadow_2.png);
-	background-position: 0px 0px;
-	background-repeat: repeat-x;
 
-	animation: animatedBackground 40s linear infinite;
-}
 body {
   font-family: Futura, sans-serif ;
   box-sizing: border-box;
@@ -42,9 +30,7 @@ NAV Bar Styling
   justify-content: space-between;
   padding-top: 2vh;
 }
-.msgBox{
-  padding: 5px;
-}
+
 
 #messageBar {
   height: 5vh;
@@ -58,19 +44,20 @@ NAV Bar Styling
 
 #messageContainer {
   display: flex;
+  flex-direction: column;
 }
 
 .inputMessage {
-  width: 60%;
+  width: 35%;
 }
 
 .chatty-logo {
   font-family: KiloGram, sans-serif;
   font-size: 30px;
-  width: 110%;
+  width: 40%;
   color: #185AFF;
-  text-align: center;
-  background-color: #71FEDB;
+ 
+  
 }
 
 
@@ -84,12 +71,7 @@ Message Output Styling
   width: 90%;
   height: 60%;
   border: 2px solid black;
-  margin: auto;
-<<<<<<< HEAD
-  padding: 10px;
-=======
-  margin-top:5%;
->>>>>>> master
+  margin: 6rem auto;
 }
 
 .message {
@@ -107,10 +89,7 @@ Message Output Styling
 }
 
 .largeText{
-<<<<<<< HEAD
   font-size: 25px;
-=======
-  font-size: 40px;
 }
 
 #container{
@@ -133,9 +112,10 @@ Message Output Styling
   display:inline;
 }
 
-.nav-bar-fix {
-  margin-top: 2rem;
->>>>>>> master
+/.nav-bar-fix {
+  margin-bottom: 3rem;
+  display: block;
+  width: 100%;
 }
 
 
