@@ -26,7 +26,6 @@ NAV Bar Styling
   flex-flow: row wrap;
   justify-content: space-between;
   padding-top: 2vh;
-  /*position: absolute;*/
 }
 
 #messageBar {
@@ -37,6 +36,10 @@ NAV Bar Styling
 #deleteMssgsBtn {
   width: 20%;
   border-radius: 20%;
+}
+
+#messageContainer {
+  display: flex;
 }
 
 .inputMessage {
@@ -61,6 +64,12 @@ Message Output Styling
   margin: auto;
   margin-top:5%;
 }
+
+.message {
+  margin: 1.5rem;
+}
+
+
  /****************************
 Message Output Styling
 ****************************/
@@ -73,12 +82,27 @@ Message Output Styling
 .largeText{
   font-size: 40px;
 }
-#container{   background:gray;
-              width:100%;
-              position:fixed;
-              height:8%;}
-#option-container{width:100%;
-                  margin-left:10%;}
-#messageBar{      width:90%;
-                  margin-left:10%;}
-.chatty-logo  {display:inline;}
+
+#container{
+  background:gray;
+  width:100%;
+  position:fixed;
+  top: 0;
+}
+
+#option-container{
+  width:100%;
+  margin-left:10%;
+}
+
+#messageBar{
+  width:90%;
+  margin-left:10%;
+}
+.chatty-logo  {
+  display:inline;
+}
+
+.nav-bar-fix {
+  margin-top: 2rem;
+}
