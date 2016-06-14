@@ -20,9 +20,10 @@
       </div>  <!-- End messageBar div -->
 
 
-	  <div id="option-container">
-        <input type="checkbox" class="dark-theme-option" id="dark-theme-option"><b>DARK THEME</b></input>
-        <input type="checkbox" class="large-text-option" id="large-text-option"><b>LARGE TEXT</b></input>
+      <div id="option-container">
+        <input type="checkbox" class="dark-theme-option" id="dark-theme-option">Dark Theme</input>
+        <input type="checkbox" class="large-text-option" id="large-text-option">Large Text</input>
+        <input type="button" id="modalButton" value="Custom theme">
       </div> <!-- End option container -->
     </div>  <!-- End container div -->
 
@@ -31,13 +32,19 @@
       <div class="msgBox" id="outputMessage"></div>
     </div>
 
-
-
-
+    <div class="colorModal" id="colorModal">
+      <div class="modalContent" id="modalContent">
+        Background color:<input class="jscolor" id="backgroundColor">
+        Text color:<input class="jscolor" id="textColor">
+        Navbar color:<input class="jscolor" id="navColor">
+        <input type="button" id="colorBtn" value="Apply">
+        <input type="button" id="close" value="Close">
+       </div>
+    </div>
 
   </body>
   <script src="loading.js"></script>
   <script src="writing.js"></script>
   <script src="deleting.js"></script>
-  <script src="users.js"></script>
+  <script src="jscolor.js"></script>
 </html>
