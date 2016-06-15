@@ -30,9 +30,11 @@ var chatty = (function(loadChatty){
   deleteAll.addEventListener("click",function(){
     chatty.deleteAll();
     if(document.getElementById("outputMessage").innerHTML===""){
+			document.getElementById("outputMessage").innerHTML = '<h1>No Messages Here!</d1>';
       deleteAll.disabled=true;
-			document.getElementById("outputMessage").innerHTML = `<h1>Sorry, No Messages!</h1>`
-    }
+    } else {
+			document.getElementById("outputMessage").innerHTML = "";
+		}
 
   });
   loadChatty.addDelete();
