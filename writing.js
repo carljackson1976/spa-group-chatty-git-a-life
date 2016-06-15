@@ -4,6 +4,8 @@ var chatty =(function(writeChatty){
 	var currentMessage;
 	var counter;
 	var output = document.getElementById("outputMessage");
+	var maxMessages = document.getElementById('maxMessages');
+	var goAwayButton = document.getElementById('goAwayButton');
 	var userName;
 	var selectedName = "ChattyBot: NO USER SELECTED LOSER! Please sign in ( - ";
 	var limit = 0;
@@ -55,11 +57,16 @@ var chatty =(function(writeChatty){
 		writeChatty.messageLimit = function() {
 
 			//determines what number the message is
-			if ( counter > 20 ) {
+		if ( counter === 20 ) {
+			maxMessages.classList.remove('hide');
+			maxMessages.classList.add('maxMessagesAn');
+			goAwayButton.addEventListener('click', function() {
+				maxMessages.classList.add('hide');
+			});
+		} else if ( counter > 20 ) {
 				document.getElementById(`message${limit}`).remove();
 				limit++;
-			}
-
+		};
 		}// end of writeChatty.messageLimit function
 
 
