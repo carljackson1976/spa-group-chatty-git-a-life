@@ -4,8 +4,11 @@ var chatty =(function(writeChatty){
 	var currentMessage;
 	var counter;
 	var output = document.getElementById("outputMessage");
+	var maxMessages = document.getElementById('maxMessages');
+	var goAwayButton = document.getElementById('goAwayButton');
 	var userName;
 	var selectedName = "ChattyBot: NO USER SELECTED LOSER! Please sign in ( - ";
+	var limit = 0;
 
 
 
@@ -19,13 +22,12 @@ var chatty =(function(writeChatty){
 		};
 	input.addEventListener("keyup", function(){
 	 	if(event.code==="Enter"){
-	//conditional statements to determine what user name is selected
-		userName = document.getElementsByName('users');
 
+		//conditional statements to determine what user name is selected
+		userName = document.getElementsByName('users');
 		//for loop checks which radio is checked and passes the
 		//checked user name to the write message
 		for ( let i = 0; i < userName.length; i++ ) {
-
 			 //conditional statement that checks for an empy string
 			 //if empty it turns input red and reads error message
 			 if ( input.value === "" ) {
@@ -37,7 +39,6 @@ var chatty =(function(writeChatty){
 				input.classList.remove('error');
 			}//end of conditional statement
 
-			writeChatty.messageLimit();
 
 		}//end for loop
 
@@ -46,20 +47,26 @@ var chatty =(function(writeChatty){
 	 		input.value="";
 	 		chatty.addDelete();
 	 		document.getElementById("deleteMssgsBtn").disabled=false;
-			}
-	 	});
+			//clears output div if greater than 20 messages
+			writeChatty.messageLimit();
+		}//end if statement testing for enter key
+	});//end keyup event listener
 
 
 		//function that checks how many messages have been sent
 		writeChatty.messageLimit = function() {
 
 			//determines what number the message is
-			if ( counter > 19 ) {
-				console.log('Limit reached', i)
-				document.getElementById(`message${i}`).remove();
-				i++;
-			}
-
+		if ( counter === 20 ) {
+			maxMessages.classList.remove('hide');
+			maxMessages.classList.add('maxMessagesAn');
+			goAwayButton.addEventListener('click', function() {
+				maxMessages.classList.add('hide');
+			});
+		} else if ( counter > 20 ) {
+				document.getElementById(`message${limit}`).remove();
+				limit++;
+		};
 		}// end of writeChatty.messageLimit function
 
 
