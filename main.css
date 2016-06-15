@@ -63,7 +63,7 @@ NAV Bar Styling
 }
 
 .chatty-logo {
-  font-family: KiloGram, sans-serif;
+  font-family: Impact, sans-serif;
   display:inline;
   font-size: 30px;
   width: 40%;
@@ -205,10 +205,11 @@ Classes for max message message
 
   0% {
     margin-top: -5%;
+    transform: rotateY(180deg);
   }
   10% {
     margin-top: 0%;
-    transform: rotateY(90deg);
+    transform: rotateY(360deg);
   }
   20% {
     margin-top: 5%;
@@ -216,30 +217,35 @@ Classes for max message message
   }
   30% {
     margin-top: 10%;
-    transform: rotateY(270deg);
+    transform: rotateY(360deg);
   }
   40% {
     margin-top: 15%;
-    transform: rotateY(270deg);
+    transform: rotateY(180deg);
   }
   50% {
     margin-top: 20%;
-    transform: rotateY(270deg);
+    transform: rotateY(360deg);
   }
   60% {
     margin-top: 25%;
+    transform: rotateY(180deg);
   }
   70% {
     margin-top: 30%;
+    transform: rotateY(360deg);
   }
   80% {
-    margin-top: 30%;
+    margin-top: 35%;
+    transform: rotateY(180deg);
   }
   90% {
-    margin-top: 30%;
+    margin-top: 35%;
+    transform: rotateY(360deg);
   }
   100% {
     margin-top: 35%;
+    transform: rotateY(360deg);
   }
 
 }

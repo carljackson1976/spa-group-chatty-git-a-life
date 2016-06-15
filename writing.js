@@ -22,6 +22,7 @@ var chatty =(function(writeChatty){
 		};
 	input.addEventListener("keyup", function(){
 	 	if(event.code==="Enter"){
+			input.classList.remove('error');
 
 		//conditional statements to determine what user name is selected
 		userName = document.getElementsByName('users');
@@ -33,11 +34,7 @@ var chatty =(function(writeChatty){
 			 if ( input.value === "" ) {
 				 input.classList.add('error');
 				 input.setAttribute('placeholder','Please enter a message.');
-				 return
-			 } else if ( userName[i].checked === true ) {
-				selectedName = userName[i].value;
-				input.classList.remove('error');
-			}//end of conditional statement
+			 }
 
 
 		}//end for loop
