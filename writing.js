@@ -7,7 +7,7 @@ var chatty =(function(writeChatty){
 	var maxMessages = document.getElementById('maxMessages');
 	var goAwayButton = document.getElementById('goAwayButton');
 	var userName;
-	var selectedName = "ChattyBot: NO USER SELECTED LOSER! Please sign in ( - ";
+	var selectedName = "Guest";
 	var limit = 0;
 
 
@@ -29,6 +29,9 @@ var chatty =(function(writeChatty){
 		//for loop checks which radio is checked and passes the
 		//checked user name to the write message
 		for ( let i = 0; i < userName.length; i++ ) {
+			if(userName[i].checked){
+				selectedName=userName[i].value;
+			}
 			 //conditional statement that checks for an empy string
 			 //if empty it turns input red and reads error message
 			 if ( input.value === "" ) {
